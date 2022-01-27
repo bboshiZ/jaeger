@@ -3,21 +3,21 @@ module github.com/jaegertracing/jaeger
 go 1.17
 
 require (
-	github.com/Shopify/sarama v1.30.1
+	github.com/Shopify/sarama v1.31.0
 	github.com/apache/thrift v0.15.0
 	github.com/bsm/sarama-cluster v2.1.13+incompatible
 	github.com/crossdock/crossdock-go v0.0.0-20160816171116-049aabb0122b
 	github.com/dgraph-io/badger/v3 v3.2103.2
 	github.com/dgraph-io/ristretto v0.1.0 // indirect
 	github.com/fsnotify/fsnotify v1.5.1
-	github.com/go-openapi/errors v0.20.1
+	github.com/go-openapi/errors v0.20.2
 	github.com/go-openapi/loads v0.21.0
-	github.com/go-openapi/runtime v0.21.0
+	github.com/go-openapi/runtime v0.21.1
 	github.com/go-openapi/spec v0.20.4
 	github.com/go-openapi/strfmt v0.21.1
 	github.com/go-openapi/swag v0.19.15
 	github.com/go-openapi/validate v0.20.3
-	github.com/gocql/gocql v0.0.0-20200228163523-cd4b606dd2fb
+	github.com/gocql/gocql v0.0.0-20211222173705-d73e6b1002a7
 	github.com/gogo/googleapis v1.4.1
 	github.com/gogo/protobuf v1.3.2
 	github.com/golang/protobuf v1.5.2
@@ -44,13 +44,13 @@ require (
 	github.com/uber/jaeger-client-go v2.30.0+incompatible
 	github.com/uber/jaeger-lib v2.4.1+incompatible
 	github.com/xdg-go/scram v1.1.0
-	go.opentelemetry.io/collector/model v0.42.0
+	go.opentelemetry.io/collector/model v0.43.1
 	go.uber.org/atomic v1.9.0
 	go.uber.org/automaxprocs v1.4.0
 	go.uber.org/zap v1.20.0
-	golang.org/x/net v0.0.0-20210917221730-978cfadd31cf
+	golang.org/x/net v0.0.0-20220105145211-5b0dc2dfae98
 	golang.org/x/sys v0.0.0-20220114195835-da31bd327af9
-	google.golang.org/grpc v1.43.0
+	google.golang.org/grpc v1.44.0
 	google.golang.org/protobuf v1.27.1
 	gopkg.in/yaml.v2 v2.4.0
 )
