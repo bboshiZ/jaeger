@@ -19,7 +19,6 @@ import (
 	"fmt"
 	"log"
 	"net/http"
-	"strconv"
 	"time"
 
 	"github.com/spf13/cobra"
@@ -46,10 +45,10 @@ func main() {
 			if len(args) != 2 {
 				return fmt.Errorf("wrong number of arguments")
 			}
-			numOfDays, err := strconv.Atoi(args[0])
-			if err != nil {
-				return fmt.Errorf("could not parse NUM_OF_DAYS argument: %w", err)
-			}
+			// numOfDays, err := strconv.Atoi(args[0])
+			// if err != nil {
+			// 	return fmt.Errorf("could not parse NUM_OF_DAYS argument: %w", err)
+			// }
 
 			cfg.InitFromViper(v)
 			tlsOpts := tlsFlags.InitFromViper(v)
@@ -80,9 +79,10 @@ func main() {
 				return err
 			}
 
-			year, month, day := time.Now().UTC().Date()
-			tomorrowMidnight := time.Date(year, month, day, 0, 0, 0, 0, time.UTC).AddDate(0, 0, 1)
-			deleteIndicesBefore := tomorrowMidnight.Add(-time.Hour * 24 * time.Duration(numOfDays))
+			// year, month, day := time.Now().UTC().Date()
+			// tomorrowMidnight := time.Date(year, month, day, 0, 0, 0, 0, time.UTC).AddDate(0, 0, 1)
+			// deleteIndicesBefore := tomorrowMidnight.Add(-time.Hour * 24 * time.Duration(numOfDays))
+			deleteIndicesBefore := time.Now().UTC().Add(-time.Hour * 6)
 			logger.Info("Indices before this date will be deleted", zap.String("date", deleteIndicesBefore.Format(time.RFC3339)))
 
 			filter := &app.IndexFilter{

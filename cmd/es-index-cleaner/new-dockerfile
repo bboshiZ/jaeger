@@ -1,0 +1,2 @@
+FROM jaegertracing/jaeger-es-index-cleaner:1.29.0
+COPY es-index-cleaner-linux-amd64 /go/bin/es-index-cleaner-linux
